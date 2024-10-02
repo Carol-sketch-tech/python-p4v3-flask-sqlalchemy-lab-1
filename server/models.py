@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import MetaData
+from sqlalchemy import MetaData,Column, String, Float, Integer
 from sqlalchemy_serializer import SerializerMixin
 
 metadata = MetaData()
@@ -7,7 +7,7 @@ metadata = MetaData()
 db = SQLAlchemy(metadata=metadata)
 
 # Add models here
-class Earthqauke(db.Model, SerializerMixin):
+class Earthquake(db.Model, SerializerMixin):
     __tablename__ = "earthquakes"
 
     id = Column(Integer(), primary_key=True)
