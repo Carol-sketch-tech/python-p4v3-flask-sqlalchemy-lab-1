@@ -10,10 +10,10 @@ db = SQLAlchemy(metadata=metadata)
 class Earthqauke(db.Model, SerializerMixin):
     __tablename__ = "earthquakes"
 
-    id = db.Column(db.Integer(), primary_key=True)
-    magnitude = db.Column(db.Float())
-    location = db.Column(db.String())
-    year = db.Column(db.Integer())
+    id = Column(Integer(), primary_key=True)
+    magnitude = Column(Float())
+    location = Column(String())
+    year = Column(Integer())
 
     def __repr__(self):
         return f'Id:{self.id},'+ \

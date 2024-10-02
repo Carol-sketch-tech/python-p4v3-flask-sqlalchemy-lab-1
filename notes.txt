@@ -1,0 +1,18 @@
+setting up a 
+    1. pipenv install 
+    2. Pipenv shell 
+  change into the server directory and configure the FLASK_APP and FLASK_RUN_APP environment varibales 
+        cd server 
+        then
+        export FLASK_APP=app.py
+        then 
+        export FLASK_RUN_PORT=5555
+    DEFING A MODEL 
+        1.use table name the define the comlimns and the data types of the data to be input in those columns
+        2. Add a def __repr__(self): function.
+
+    INITIALZING THE DATABASE.
+    - to create a database names app.db with a table named earthquakes.
+    - we need to execute the following commands 
+         flask db init 
+         flask db migrate -m miigrate 'initia migrations'
